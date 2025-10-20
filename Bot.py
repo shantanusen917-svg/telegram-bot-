@@ -1,4 +1,14 @@
-from telegram import Update, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # .env ফাইল থেকে সব Environment Variable লোড করবে
+
+# ===== Environment Variables =====
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8024858447:AAGJjwBm587bn84I68b1_2ad6h173Qysuec")
+ADMIN_ID = int(os.getenv("ADMIN_ID", 6345288802))
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "@ajahajahh")
+PAYEER_UID = os.getenv("PAYEER_UID", "P1123839604")
+CURRENT_RATE = int(os.getenv("CURRENT_RATE", 125)) from telegram import Update, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
 import csv, os
 from datetime import datetime
